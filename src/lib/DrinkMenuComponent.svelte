@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { slide } from "svelte/transition";
   export let cocktailMenu;
   export let beerMenu;
   export let catagories;
@@ -9,7 +10,7 @@
             <h2 style="text-align: left;"><b><u>{catagories[1]}</b></h2>
             <div style="display: flex; flex-direction:column;">
               {#each cocktailMenu as cocktailItem}
-                <div style="display: flex; float: right; ">
+                <div style="display: flex; float: right;" transition:slide>
                   <h3 style="float: left;"><b>{cocktailItem.cocktailName.toUpperCase()}</b></h3>
                   <h3 style="float: right">{cocktailItem.cocktailPrice}</h3>
                 </div>
@@ -25,7 +26,7 @@
             <h2 style="text-align: left;"><b><u>{catagories[0]}<u></b></h2>
             <div style="display: flex; flex-direction:column;">
                 {#each beerMenu as beerItem}
-                  <div style="display: flex; float: right; margin-top: -5px;">
+                  <div style="display: flex; float: right; margin-top: -5px;" transition:slide>
                     <h3 style="float: left; text-align: left;"><b>{beerItem.beerName.toUpperCase()}</b></h3>
                     <h3 style="float: right; text-align: right;">{beerItem.beerPrice}</h3>
                   </div>
