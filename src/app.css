@@ -14,8 +14,25 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  overflow-y: auto;
+  overflow-y: hidden;
   overflow-x: hidden;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 4rem;
+}
+h2 {
+  font-size: 1.2rem;
+  padding-right: 0.3em;
+}
+h3 {
+  font-size: 1.00rem;
+  padding-right: 0.85em;
+  font-weight: 500;
+}
+p {
+  font-size: 0.9rem;
 }
 
 ::-webkit-scrollbar {
