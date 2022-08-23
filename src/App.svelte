@@ -81,7 +81,7 @@
 
 <style>
   main {
-    margin: 60px;
+    margin: 5rem;
   }
   .main-container {
     display: flex;
