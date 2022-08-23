@@ -11,4 +11,4 @@ This project functions as an showcase of what to expect when working with Dawson
 
 **End Date**: 08-23-22; Chicago, IL; 1:42 AM
 
-Developed using **Svelte Version 3.48** with **Vite** on **M1 Macbook Pro (2020)** using **TypeScript**.
+Developed using **Svelte** with **Vite** on **M1 Macbook Pro (2020)** using **TypeScript**.
