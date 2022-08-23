@@ -4,7 +4,7 @@ This is the official website for **Taylor Street Tap**.
 
 This project was designed and developed by **Dawson McThay** for **Taylor Street Tap**.
 
-This project functions as an showcase of what to expect when working with Dawson.
+This project functions as an showcase of what to expect if you purchase a Svelte project from Dawson.
 
 
 **Start Date**: 08-04-22; Chicago, IL; 09:11 PM
