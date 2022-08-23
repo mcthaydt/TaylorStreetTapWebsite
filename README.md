@@ -13,7 +13,7 @@ This project functions as an showcase of what to expect when working with Dawson
 
 Developed using **Svelte** with **Vite** on **M1 Macbook Pro (2020)** using **TypeScript**.
 
-**Fun Fact**: This was my first Svelte website and first paid freelancing gig for programming. Very exciting. 
+**Fun Fact**: This was my first Svelte website and my first time freelancing as a developer. Very exciting.😍 
 
 
 **Live Site**: https://taylorstreettap.netlify.app
