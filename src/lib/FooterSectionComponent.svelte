@@ -18,9 +18,12 @@
     font-weight: bold;
     color: rgba(248, 248, 248, 0.85);
     padding-right: 2rem;
+    text-align: left;
+    float: left;
   }
   p {
     text-align: right;
+    float: right;
     margin-left: auto;
   }
 </style>

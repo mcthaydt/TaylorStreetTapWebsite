@@ -40,6 +40,7 @@
   .MenuContainer {
     max-height: 32rem;
     overflow-x: hidden;
+    overflow-y: auto;  
   } 
   .CatagoryTitleText {
     text-align: left;
