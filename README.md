@@ -1,4 +1,4 @@
-# Taylor Street Tap
+# Taylor Street Tap Website
 
 This is the official website for **Taylor Street Tap**.
 
