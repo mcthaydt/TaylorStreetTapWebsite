@@ -1,39 +1,82 @@
 <script lang="ts">
   import { slide } from "svelte/transition";
+
   export let cocktailMenu;
   export let beerMenu;
   export let catagories;
 </script>
 
-        <div style="max-height: 32rem; overflow-x: hidden">
-          <div>
-            <h2 style="text-align: left;"><b><u>{catagories[1]}</b></h2>
-            <div style="display: flex; flex-direction:column;">
-              {#each cocktailMenu as cocktailItem}
-                <div style="display: flex; float: right;" transition:slide>
-                  <h3 style="float: left;"><b>{cocktailItem.cocktailName.toUpperCase()}</b></h3>
-                  <h3 style="float: right">{cocktailItem.cocktailPrice}</h3>
-                </div>
-                <p style="margin-top: -5px;">{cocktailItem.cocktailDescription}</p>
-                {#if cocktailItem.Seasonal == true}
-                  <p style="float: right; text-align: left; margin-top: -5px; letter-spacing: 1.3px; color: orange">SEASONAL</p>
-                {/if}
-              {/each}
-            </div>
-          </div>
-
-          <div>
-            <h2 style="text-align: left;"><b><u>{catagories[0]}<u></b></h2>
-            <div style="display: flex; flex-direction:column;">
-                {#each beerMenu as beerItem}
-                  <div style="display: flex; float: right; margin-top: -5px;" transition:slide>
-                    <h3 style="float: left; text-align: left;"><b>{beerItem.beerName.toUpperCase()}</b></h3>
-                    <h3 style="float: right; text-align: right;">{beerItem.beerPrice}</h3>
-                  </div>
-                  <div style="display: flex; align-items: center;">
-                    <p style="float: left; text-align: left; margin-top: -5px; padding-right: 1rem; letter-spacing: 1.3px">{beerItem.beerType}</p>
-                  </div>
-                {/each}
-            </div>
-          </div>
+<div class="MenuContainer">
+  <div>
+    <h2 class="CatagoryTitleText"><b><u>{catagories[1]}</b></h2>
+    <div class="CatagoryContainer">
+      {#each cocktailMenu as cocktailItem}
+        <div class="CocktailItemContainer" transition:slide>
+          <h3 class="ItemName"><b>{cocktailItem.cocktailName.toUpperCase()}</b></h3>
+          <h3 class="ItemPrice">{cocktailItem.cocktailPrice}</h3>
         </div>
+        <p class="ItemDescripion">{cocktailItem.cocktailDescription}</p>
+      {/each}
+    </div>
+  </div>
+
+  <div>
+    <h2 class="CatagoryTitleText"><b><u>{catagories[0]}<u></b></h2>
+    <div class="CatagoryContainer">
+        {#each beerMenu as beerItem}
+          <div class="BeerItemContainer" transition:slide>
+            <h3 class="ItemName"><b>{beerItem.beerName.toUpperCase()}</b></h3>
+            <h3 class="ItemPrice">{beerItem.beerPrice}</h3>
+          </div>
+          <div class="ItemTypeContainer">
+            <p class="ItemType">{beerItem.beerType}</p>
+          </div>
+        {/each}
+    </div>
+  </div>
+</div>
+
+<style>
+  .MenuContainer {
+    max-height: 32rem;
+    overflow-x: hidden;
+  } 
+  .CatagoryTitleText {
+    text-align: left;
+  }
+  .CatagoryContainer {
+    display: flex;
+    flex-direction: column;
+  }
+  .CocktailItemContainer {
+    display: flex;
+    float: right;
+  }
+  .BeerItemContainer {
+    display: flex;
+    float: right;
+    margin-top: -1rem;
+  }
+  .ItemName {
+    float: left;
+    text-align: left;
+  }
+  .ItemPrice {
+    float: right;
+    text-align: right;
+  }
+  .ItemDescripion {
+    margin-top: -1rem;
+  }
+  .ItemTypeContainer {
+    display: flex;
+    align-items: center;
+  }
+  .ItemType {
+    float: left;
+    text-align: left;
+    margin-top: -1rem;
+    padding-right: 1rem;
+    letter-spacing: 1.3px
+  }
+</style>

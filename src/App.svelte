@@ -1,4 +1,9 @@
 <script lang="ts">
+  import { slide, blur } from 'svelte/transition';
+  import { onMount } from 'svelte';
+
+  let ready = false;
+  onMount(() => ready = true);
 
   import { each } from "svelte/internal";
 
@@ -57,27 +62,30 @@
 
 </script>
 
-<main class="main-container">
-    <div style="display: flex; align-content: center">
-      
-      <div class="left-side">
+<main>
+  {#if ready}
+    <div class="main-container" transition:slide>
+      <div class="left-side" transition:blur>
         <Hero />
         <Title /> 
         <Info />
       </div>
-
-      <div class="right-side"> 
+      <div class="right-side" transition:blur> 
         <DrinkMenuTitle />
         <DrinkMenu cocktailMenu={cocktailMenu} beerMenu={beerMenu} catagories={catagories} />
       </div>
-
     </div>
-    <Footer cocktailOfTheWeek={cocktailOfTheWeek} /> 
+    <Footer cocktailOfTheWeek={cocktailOfTheWeek} transititon:slide/> 
+  {/if}
 </main>
 
 <style>
-  .main-container {
+  main {
     margin: 60px;
+  }
+  .main-container {
+    display: flex;
+    align-content: center;
   }
   .left-side {
     float:left;

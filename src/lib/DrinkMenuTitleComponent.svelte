@@ -1,1 +1,9 @@
-<h1 style="text-align: right; margin: auto; padding-bottom: 15px;">MENU</h1>
+<h1>MENU</h1>
+
+<style>
+  h1 {
+    text-align: right;
+    margin: auto;
+    padding-bottom: 2rem;
+  }
+</style>
